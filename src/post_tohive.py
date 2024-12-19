@@ -7,5 +7,5 @@ df = spark.read.format("jdbc").option("url", "jdbc:postgresql://18.132.73.146:54
 df.printSchema()
 
 
-sorted_df.write.mode("overwrite").saveAsTable("bigdata_nov_2024.people_sujay")
+df.write.mode("overwrite").saveAsTable("bigdata_nov_2024.people_sujay")
 print("Successfully Load to Hive")
