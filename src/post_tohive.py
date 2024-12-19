@@ -13,5 +13,5 @@ df_age = df.withColumn("DOB", to_date(col("DOB"), "M/d/yyyy")) \
 df_age.show(10)
 
 
-sorted_df.write.mode("overwrite").saveAsTable("sujay.people_new")
+sorted_df.write.mode("overwrite").saveAsTable("sujay.people_sujay")
 print("Successfully Load to Hive")
