@@ -10,5 +10,5 @@ query = 'SELECT * FROM bigdata_nov_2024.sujay_sales WHERE "sale_id" > ' + str(m_
 
 more_data = spark.read.format("jdbc").option("url", "jdbc:postgresql://18.132.73.146:5432/testdb").option("driver", "org.postgresql.Driver").option("user", "consultants").option("password", "WelcomeItc@2022").option("query", query).load()
 
-df_increment.write.mode("append").saveAsTable("bigdata_nov_2024.sujay_sales")
+more_data.write.mode("append").saveAsTable("bigdata_nov_2024.sujay_sales")
 print("Successfully Load to Hive")
